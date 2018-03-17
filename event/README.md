@@ -24,7 +24,7 @@ App({
 /**
  * a.js
  * 注册监听器
- */ 
+ */
 const app = getApp()
 
 Page({
@@ -61,3 +61,7 @@ Page({
     }
 })
 ```
+
+## 注意
+
+务必在 onUnload 阶段，注销监听。因为 Event 持有了 Page 的 this ，所以一定要在 Page 的 onUnload 函数中注销监听，防止内存泄漏。
