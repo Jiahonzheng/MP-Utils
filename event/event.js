@@ -8,9 +8,9 @@ class Event {
      * 参数必需
      * 在 onLoad 阶段调用
      * 监听名称为 event 的事件，添加 listener 作为事件响应
-     * @param event {String} {} 事件名称
-     * @param listenr {Function} 事件响应
-     * @param ctx {Object} 事件触发器的上下文，即Page实例中的 this
+     * @param {String} event - 事件名称
+     * @param {Function} listener - 事件响应
+     * @param {Object} ctx - 事件触发器的上下文，即Page实例中的 this
      */
     on(event, listener, ctx) {
         if (typeof fn !== "function") {
