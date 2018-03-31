@@ -4,17 +4,17 @@
  * @param {Integer} gapTime - 节流时间，默认为 1500ms
  */
 function throttle(fn, gapTime = 1500) {
-    let lastTime = null;
+  let lastTime = null;
 
-    return function() {
-        let nowTime = new Date();
+  return function() {
+    let nowTime = new Date();
 
-        if (nowTime - lastTime > gapTime || !lastTime) {
-            // 通过 apply 改变函数内部 this 指向
-            fn.apply(this, arguments);
-            lastTime = nowTime;
-        }
-    };
+    if (nowTime - lastTime > gapTime || !lastTime) {
+      // 通过 apply 改变函数内部 this 指向
+      fn.apply(this, arguments);
+      lastTime = nowTime;
+    }
+  };
 }
 
 export default throttle;
